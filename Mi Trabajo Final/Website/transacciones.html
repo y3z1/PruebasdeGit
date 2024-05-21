@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones</title>
+</head>
+<body>
+    <h1>Transacciones</h1>
+    <ul>
+    {% for t in transacciones %}
+        <li>Fecha: {{ t.fecha }}, Descripción: {{ t.descripcion }}, Cantidad: {{ t.cantidad }} {{ t.moneda }}, Tipo: {{ t.tipo }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Volver</a>
+</body>
+</html>
